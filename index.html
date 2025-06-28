@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherLive Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>WeatherLive Dashboard</h1>
+
+    <div class="input-group">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Enter city name"
+        data-user-typed="false"
+      />
+      <button onclick="subscribeCity()">Search</button>
+      <button onclick="useGeolocation()">Use My Location</button>
+    </div>
+
+    <div class="weather-info" id="weatherDisplay">
+      <p><strong>City:</strong> <span id="cityName">-</span></p>
+      <p><strong>Temperature:</strong> <span id="temperature">-</span>°C</p>
+      <p><strong>Humidity:</strong> <span id="humidity">-</span>%</p>
+      <p><strong>Wind Speed:</strong> <span id="windSpeed">-</span> m/s</p>
+      <p><strong>Forecast:</strong> <span id="forecast">-</span></p>
+    </div>
+
+    <div class="download-options">
+      <label for="hours">Download report for last (hours):</label>
+      <input type="number" id="hours" min="1" value="1" />
+      <button onclick="downloadReport()">Download</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
