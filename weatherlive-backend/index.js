@@ -1,3 +1,6 @@
+require("dotenv").config();
+const API_KEY = process.env.API_KEY;
+
 const express = require("express");
 const http = require("http");
 const WebSocket = require("ws");
@@ -10,7 +13,7 @@ const wss = new WebSocket.Server({ server });
 
 app.use(cors());
 
-const API_KEY = "95d56163e3622bd249d20ea20b0e5c06";
+// const API_KEY = "YOUR_OPENWEATHERMAP_API_KEY"; // Replace with your own API key
 const PORT = 3000;
 let clients = new Map();
 let weatherHistory = [];
